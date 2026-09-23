@@ -1,4 +1,4 @@
-/** 
+/**
  * Forward declaration of guess API.
  * @param  num   your guess
  * @return 	     -1 if num is higher than the picked number
@@ -10,16 +10,14 @@
 class Solution {
 public:
     int guessNumber(int n) {
-        long long l = 1 , r = n;
-        while(l <= r){
+        long long l = 1, r = n;
+        while (l <= r) {
             long long m = int((l + r) / 2);
-            if(guess(m) == 0){
+            if (guess(m) == 0) {
                 return m;
-            }
-            else if(guess(m) == 1){
+            } else if (guess(m) == 1) {
                 l = m + 1;
-            }
-            else{
+            } else {
                 r = m - 1;
             }
             // cout << guess(m) << endl;
